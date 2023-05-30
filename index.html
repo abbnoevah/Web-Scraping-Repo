@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="importGPUData.js"></script>
+    <link rel="stylesheet" href="index.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="headerTitle">GPU Comparer</div> 
+
+
+    </div>
+
+    <!-- <label for="keyword">Enter a keyword:</label> -->
+    <div id="searchText">What are you looking for?</div>
+    <div class="filtering">
+        <input type="text" id="keyword" placeholder="Enter a keyword">
+        <button id="filterBtn">FILTER</button>
+    </div>
+
+    <div id="listContainer">
+        <div id="listDiv">
+            <div class="eachList">
+                <h1 class="inet"> INET </h1>
+                <ul id="inet-list"></ul>   
+            </div>
+            <hr>
+            <div class="eachList">
+                <h1 class="elgig"> ELGIGANTEN </h1>
+                <ul id="elgig-list"></ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="https://www.elgiganten.se/" class="headerTitle">ELGIGANTEN</a>
+         <a href="https://www.inet.se/" class="headerTitle">INET</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,280 @@
+html {
+    top:0;
+    left:0;
+    font-family:
+    'Source Sans Pro',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+}
+body {
+    background-color: rgb(47, 46, 59);
+    
+}
+
+#listContainer {
+    max-width: 90svw;
+    min-width: 90svw;
+    margin: auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    
+    
+}
+#listDiv {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0 0 32px 0 rgba(0,0,0,0.2);
+    gap:4rem;
+    padding: 1rem;
+    
+}
+
+ul {
+    list-style-position: 0;
+    margin: 0;
+}
+
+
+#listDiv h1 {
+    text-align: center;
+    font-size: 36px;
+    padding-block: 0.5rem;
+    margin-top: 0;
+}
+.inet {
+    color: rgb(219, 102, 102);   
+    background: rgb(219, 102, 102);
+    background: linear-gradient(270deg, rgba(0,0,0,0) 30%, rgba(219, 102, 102,0.6) 100%);
+}
+
+.elgig {
+    color: rgb(94, 223, 148);
+    background: rgb(94, 223, 148);
+    background: linear-gradient(90deg, rgba(0,0,0,0) 30%, rgb(94, 223, 148,0.6) 100%);
+}
+
+#listDiv li {
+
+    list-style-type: none;
+    
+}
+
+#listDiv img {
+    height: 10rem;
+    margin-left: 2rem;
+    
+}
+
+#listDiv h3 {
+    overflow-x: hidden;
+    white-space: nowrap;  
+}
+
+.eachList {
+    max-width: 50%;
+    min-width: 45%;
+    display: block;  
+}
+
+
+#inet-list {
+    background-color: rgb(63, 62, 80);
+    /* width: 100%; */
+    padding-top: 0.5rem;
+    padding-left: 0;
+}
+#elgig-list {
+    background-color: rgb(63, 62, 80);
+    /* width: 100%; */
+    padding-top: 0.5rem;
+    padding-left: 0;
+    
+}
+#inet-list .gpuTitle {
+    color: rgb(219, 102, 102);
+    overflow-x: hidden;
+    white-space: nowrap;
+    font-size: 22px;
+    margin-top: 2rem;
+    margin-inline: 2rem;
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+    background-color: rgba(255,255,255,0.1);
+    text-shadow: 0 1px 6px rgba(0,0,0,0.3);
+
+}
+#elgig-list .gpuTitle {
+    color: rgb(94, 223, 148);
+    overflow-x: hidden;
+    white-space: nowrap;
+    font-size: 22px;
+    margin-top: 2rem;
+    margin-inline: 2rem;
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+    background-color: rgba(255,255,255,0.2);
+    text-shadow: 0 1px 6px rgba(0,0,0,0.3);
+
+}
+
+.gpuPrice {
+    color: white;
+    background: rgb(87,45,255);
+    background: linear-gradient(20deg, rgba(87,45,255,1) 0%, rgba(188,45,255,1) 100%);
+    width: 8rem;
+    text-align: center;
+    padding-inline: 1rem;
+    padding-block: 0.6rem;
+    border-radius: 0.1rem;
+    font-size: 32px;
+    font-weight: 500;
+
+    margin-left: 2rem;
+
+    box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
+    text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+
+}
+
+.gpuPrice:hover{
+    color: black;
+    box-shadow: 0 0 16px 0 rgba(87,45,255,0.5);
+    
+
+}
+
+.gpuStock {
+    color: rgba(255,255,255,0.5);
+    margin-left: 2rem;
+}
+
+.header {
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+    background-color: rgba(0,0,0,0.2);
+    color: rgb(255, 129, 45);
+    padding-block: 1rem;
+}
+
+.footer {
+    bottom: 0;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+    background-color: rgba(0,0,0,0.2);
+    color: rgb(255, 129, 45);
+    padding-block: 1rem;
+}
+
+.footer a {
+    width: 30%;
+    text-align: center;
+    color: rgba(87,45,255,0.5);
+    text-decoration: none;
+    text-shadow: 0 0 16px rgba(0,0,0,0.5);
+}
+
+.footer a:hover {
+    color: rgba(113, 77, 255, 0.5);
+    text-shadow: 0 0 16px rgba(55, 24, 180, 0.5);
+    transition: 200ms;
+}
+
+.filtering {
+    display: flex;
+    position: sticky;
+    top:0;
+    height: 4rem;
+    justify-content: center;
+    gap: 2rem;
+    margin-block: 1rem;
+    padding-block: 1rem;
+    background-color: rgb(57, 55, 70);
+    box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
+
+}
+
+#searchText {
+    text-align: center;
+    font-size: 32px;
+    background: rgb(204,0,42);
+    background: linear-gradient(20deg, rgba(204,0,42,0) 0%, rgb(118, 45, 255) 100%);
+    padding-block: 0.5rem;
+    margin-block: 2rem;
+    color: white;
+    text-shadow: 0 0 8px rgba(0,0,0,1);
+}
+
+#keyword {
+    background-color: rgba(0,0,0,0.2);
+    box-shadow: 0 0 32px 0 rgba(0,0,0,0.2);
+    border: solid 2px rgba(255,255,255,0.2);
+    border-radius: 0.6rem;
+    padding: 1rem;
+    color: white;
+    font-size: 16px;
+}
+
+#keyword:focus{
+    border: solid 2px rgb(255, 200, 117);
+    outline: none;
+    box-shadow: 0 0 32px 0 rgba(255,255,255,.1);
+    background-color: rgba(255, 252, 255, 0.2);
+    color: rgba(0,0,0);
+
+}
+
+#filterBtn {
+    color: white;
+    background: rgb(204,0,42);
+    background: linear-gradient(20deg, rgba(204,0,42,1) 0%, rgba(255,220,45,1) 100%);   
+    text-align: center;
+    padding-inline: 2rem;
+    padding-block: 1.2rem;
+    border-radius: 0.6rem;
+    font-size: 24px;
+    font-weight: 500;
+    border: none;
+
+
+    box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
+    text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+}
+
+#filterBtn:hover {
+    color: rgb(0, 0, 0);
+    border: none;
+
+    box-shadow: 0 0 32px 0 rgba(204, 41, 0, 0.5);
+    text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+
+    transition: 200ms;
+    transform: scale(0.95);
+    size: 90%;
+}
+
+hr {
+    background: rgb(255, 129, 45);
+    width: 2px;
+    border: none;
+    
+}
+
+.infoElement {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 2rem;
+    margin-right: 4rem;
+    padding-block: 1rem;
+}
