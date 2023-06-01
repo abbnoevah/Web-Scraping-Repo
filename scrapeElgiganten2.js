@@ -20,7 +20,7 @@ const getQuotes = async () => {
 
   let data = []
 
-  for (let i = 1; i < 3; i++) {
+  for (let i = 1; i < 3; i++) { // suboptimalt sätt att växla till nästa page
 
     const page = await browser.newPage()
     console.log(`Navigating to ${url}...`)
@@ -33,7 +33,7 @@ const getQuotes = async () => {
 
     //REMOVE COOKIES -----
 
-    if (i == 1) {
+    if (i == 1) { //EFtersom att cookies endast kommer upp på första sidan behöver vi bara ta bort den när den första sidan laddas, dvs, i == 0
 
       const selectorCookiesButton = 'button[class="coi-banner__accept"]'
       // const loadMoreButton = "a[class='pagination__arrow']"
@@ -53,7 +53,7 @@ const getQuotes = async () => {
 
       await page.waitForSelector(selectorCookiesButton)
 
-      while (cookiesVisible) {
+      while (cookiesVisible) { // väntar på en selector och kör funktionen medan funktionen isElementVisible avgör att den är synlig
         await page
           .click('button[class="coi-banner__accept"]')
           .catch(() => { })
@@ -81,7 +81,7 @@ const getQuotes = async () => {
       let list = Array.from(document.querySelectorAll(".product-list__cell"))
 
       console.log(list.length)
-
+      // Väntar tills att det inte går att scrolla mer på sidan (för att ladda in allting på sidan) innan den hämtar querySelectorAll
       return new Promise((resolve) => {
         let length = list.length
 
@@ -124,7 +124,7 @@ const getQuotes = async () => {
 
     // data = [...data, ...GPUs]
     data.push(GPUs)
-    data = data.flat()
+    data = data.flat() // Tar den befintliga listan och jämnar ut den på en och samma nivå.
 
     console.log(data)
     console.log(data.length)
@@ -132,7 +132,7 @@ const getQuotes = async () => {
     const jsonData = JSON.stringify(data)
     const filePath = './ElgigData.json'
 
-    fs.writeFile(filePath, jsonData, 'utf8', (err) => {
+    fs.writeFile(filePath, jsonData, 'utf8', (err) => { // skapar en fil under variabel "filePath" och skriver över filen om den redan finns.
       if (err) {
         console.error('An error occurred while writing to the file:', err)
       } else {
